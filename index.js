@@ -6,15 +6,15 @@ import Login from './src/screens/Login';
 
 //AppRegistry.registerComponent('InstaluraMobile', () => App);
 //AppRegistry.registerComponent('InstaluraMobile', () => Login);
- Navigation.registerComponent('Login', () => Login);
- Navigation.registerComponent('Feed', () => Feed);
+//  Navigation.registerComponent('Login', () => Login);
+//  Navigation.registerComponent('Feed', () => Feed);
 
-// export default () => {
-//     Navigation.registerComponent('Login', () => Login);
-//     Navigation.registerComponent('Feed', () => Feed);
+export default () => {
+    Navigation.registerComponent('Login', () => Login);
+    Navigation.registerComponent('Feed', () => Feed);
 
-//     // Navigation.startSingleScreenApp({
-//     //     screen: 'Login',
-//     //     title: 'Login'
-//     // });
-// }
+    // Navigation.startSingleScreenApp({
+    //     screen: 'Login',
+    //     title: 'Login'
+    // });
+}
