@@ -25,8 +25,8 @@ export default class Login extends Component {
     }
 
     efetuaLogin() {
-        const uri = "http://10.0.2.2:8080/api/public/login";
-        //const uri = "https://instalura-api.herokuapp.com/api/public/login"
+        //const uri = "http://10.0.2.2:8080/api/public/login";
+        const uri = "https://instalura-api.herokuapp.com/api/public/login"
 
         const requestInfo = {
             method: 'POST',
@@ -50,6 +50,13 @@ export default class Login extends Component {
                 AsyncStorage.setItem('token', token);
                 AsyncStorage.setItem('usuario', this.state.usuario);
 
+                this.props.navigator.push({
+                    screen: {
+                        screen: 'Feed',
+                        title: 'Instalura'
+                    }
+                })
+
             })
             .catch(e => this.setState({ mensagem: e.message }))
     }
@@ -57,7 +64,7 @@ export default class Login extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.titulo}>Instateste</Text>
+                <Text style={styles.titulo}>Instalura</Text>
                 <View style={styles.form}>
                     <TextInput style={styles.input}
                         placeholder="Usuário"

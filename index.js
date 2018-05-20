@@ -1,20 +1,18 @@
-//import { AppRegistry } from 'react-native';
-//import App from './App';
-import Navigation from 'react-native-navigation';
+//importação correta do Navigation
+import { Navigation } from 'react-native-navigation';
+
+//importações normais dos nossos componentes
 import Feed from './src/components/Feed';
 import Login from './src/screens/Login';
 
-//AppRegistry.registerComponent('InstaluraMobile', () => App);
-//AppRegistry.registerComponent('InstaluraMobile', () => Login);
-//  Navigation.registerComponent('Login', () => Login);
-//  Navigation.registerComponent('Feed', () => Feed);
+// registro dos componentes como telas no Navigation
+Navigation.registerComponent('Login', () => Login);
+Navigation.registerComponent('Feed', () => Feed);
 
-export default () => {
-    Navigation.registerComponent('Login', () => Login);
-    Navigation.registerComponent('Feed', () => Feed);
-
-    // Navigation.startSingleScreenApp({
-    //     screen: 'Login',
-    //     title: 'Login'
-    // });
-}
+// start da app (fundamental para a renderização inicial da app)
+Navigation.startSingleScreenApp({
+    screen: {
+        screen: 'Login',
+        title: 'Login'
+    }
+});

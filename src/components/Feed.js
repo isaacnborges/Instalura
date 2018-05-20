@@ -20,6 +20,7 @@ export default class Feed extends Component {
   componentDidMount() {
     //fetch('http://localhost:8080/api/public/fotos/rafael')
     fetch('https://instalura-api.herokuapp.com/api/public/fotos/rafael')
+    //fetch('http://10.0.2.2:8080/api/public/fotos/rafael')    
       .then(resposta => resposta.json())
       .then(json => this.setState({ fotos: json }));
   }
