@@ -51,10 +51,8 @@ export default class Login extends Component {
                 AsyncStorage.setItem('usuario', this.state.usuario);
 
                 this.props.navigator.push({
-                    screen: {
-                        screen: 'Feed',
-                        title: 'Instalura'
-                    }
+                    screen: 'Feed',
+                    title: 'Instalura'
                 })
 
             })
@@ -117,5 +115,5 @@ const styles = StyleSheet.create({
     mensagem: {
         marginTop: 15,
         color: '#e74c3c'
-    }    
+    }
 })
